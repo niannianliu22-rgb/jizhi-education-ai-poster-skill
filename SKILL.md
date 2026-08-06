@@ -15,9 +15,13 @@ Treat product facts as higher priority than creative expression. Keep the three 
 
 - All brands and all posters default to no CTA. Do not add buttons, contact prompts, reservation prompts, QR guidance, keyword prompts, or conversion endings unless the user explicitly overrides this rule.
 - Use original logos whenever available. Never redraw, restyle, or AI-generate a logo.
+- Resolve every bundled path relative to this skill directory. Never emit or depend on a machine-specific home or temporary-directory path.
+- Use the bundled asset inventory in [references/asset-manifest.md](references/asset-manifest.md). Do not guess asset ownership from filename, color, or pose.
+- Use the approved poster reference library in `assets/examples/` as visual grammar, not as a source of current product facts, copy, CTA, prices, promises, or customer data.
 - Use only brand-IP assets explicitly identified or approved by the user for the active brand.
 - A `DP` chest mark belongs only to DP. An `AI` chest mark belongs only to 极致AI留学生陪跑. Never mix, replace, redraw, or infer ownership from color or pose.
 - If the correct brand IP is unavailable, omit the IP instead of substituting another brand variant.
+- Prefer an approved transparent PNG for free-standing logo or IP placement. Never leave an accidental rectangular source background floating over the poster background. If a source has a deliberate background, place the complete image as an intentional card or omit it; do not fake transparency by regenerating the IP.
 - For case posters, every user-provided evidence image must remain the original image. Never redraw, regenerate, beautify, rewrite, clean up, fake, crop away key content, or synthesize a replacement.
 - Evidence treatment is limited to placement-level scaling, spacing, stacking, framing, border, shadow, and positioning. Preserve aspect ratio and keep the evidence comfortably readable.
 - If private information is visible, pause and request an already-redacted original from the user. Do not alter evidence to redact it inside the poster workflow.
@@ -85,7 +89,13 @@ Cross-brand promise or IP mixing is a blocking error.
 
 ### 4. Lock the visual direction
 
-Read [references/brand-guidelines.md](references/brand-guidelines.md), then define brand colors, supporting colors, atmosphere, graphic language, layout temperament, logo handling, IP handling, and evidence handling.
+Read [references/brand-guidelines.md](references/brand-guidelines.md) and [references/asset-manifest.md](references/asset-manifest.md). Select 2-4 approved examples matching the active brand, poster type, information density, and canvas proportion. Use them to anchor headline scale, spacing, card rhythm, graphic language, and IP balance; never copy their factual content or obsolete conversion elements. Then define brand colors, supporting colors, atmosphere, graphic language, layout temperament, logo handling, IP handling, and evidence handling.
+
+Reference sources:
+
+- `极致Essay`: `assets/examples/essay/`
+- `DP-Distinction Pass`: `assets/examples/dp/`
+- `极致AI留学生陪跑`: may borrow layout grammar from `assets/examples/dp/`, but must keep AI-companion positioning, logo, and AI chest-mark IP.
 
 ### 5. Choose one production logic
 
@@ -113,7 +123,9 @@ For case posters, preserve every evidence image exactly and use the evidence as 
 
 When generating a new illustration, use the image-generation tool. When composing a case poster, prefer deterministic layout/compositing so supplied evidence, logos, and IP remain original.
 
-Separate any AI-generated base background from post-production placement of original logo, IP, evidence, and Chinese text.
+Separate any AI-generated base background from post-production placement of original logo, IP, evidence, and Chinese text. Resolve bundled assets from `assets/` relative to this skill directory. Do not substitute files from another local folder when a bundled original is available.
+
+When the image tool accepts visual references, pass the selected approved examples as style references while reserving original logo, IP, and evidence for deterministic post-production placement. Do not ask the model to recreate a bundled logo or mascot from a reference poster.
 
 ### 9. Run QA
 
@@ -218,4 +230,4 @@ When the user requests a plan rather than a finished poster, output these sectio
 
 Preserve valid parts first. Regenerate the whole solution only when brand, product, poster type, usage goal, or real-material set changes. For a local change, update only affected areas and rerun QA.
 
-Read [references/qa-checklist.md](references/qa-checklist.md) during execution and use [references/brand-guidelines.md](references/brand-guidelines.md) as the visual source of truth.
+Read [references/qa-checklist.md](references/qa-checklist.md) during execution, use [references/brand-guidelines.md](references/brand-guidelines.md) as the visual source of truth, and use [references/asset-manifest.md](references/asset-manifest.md) as the asset-ownership source of truth.

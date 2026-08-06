@@ -7,6 +7,8 @@
 - No generic visual system that erases brand differences.
 - DP chest mark only for DP; AI chest mark only for 极致 AI 留学生陪跑.
 - Only user-confirmed IP assets for the active brand.
+- Logo and IP selection matches `references/asset-manifest.md`.
+- Selected visual references come from the correct approved directory; DP identity elements were not transferred to AI陪跑.
 
 ## Product truth
 
@@ -18,7 +20,10 @@
 
 - Original logos only.
 - No AI-generated or redrawn logos.
+- Bundled materials resolve from relative `assets/` paths, with no machine-specific home or temporary-folder dependency.
+- Free-standing IP uses an approved transparent asset; no accidental rectangular source background is visible over the poster.
 - No rewritten grades, screenshots, customer feedback, or chat UI.
+- No factual copy, CTA, customer data, screenshots, prices, or guarantees copied from historical visual references.
 - Case evidence remains the original image with original aspect ratio and readable content.
 - Only placement-level scaling, framing, border, shadow, spacing, stacking, and positioning are allowed.
 - If privacy is visible, request an already-redacted original.
@@ -53,6 +58,8 @@ Return `不通过` for:
 - Fake or modified case evidence
 - AI-generated logo
 - Cross-brand IP substitution
+- Machine-specific absolute asset path
+- Accidental visible source-background rectangle around logo or IP
 - Privacy leakage
 - Unsupported promises
 - Forced fixed-height layout that makes evidence unreadable

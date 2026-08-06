@@ -9,7 +9,11 @@ Use this file whenever poster visual direction, palette, logo, IP, or evidence h
 - All brands and all posters default to no CTA.
 - Do not add conversion bars, button-like action blocks, QR guidance, reservation prompts, consultation prompts, or keyword prompts unless explicitly requested.
 - `DP` chest mark is DP-only. `AI` chest mark is 极致AI留学生陪跑-only. Never mix them.
+- Resolve bundled materials from `assets/` relative to the skill root. Never rely on the creator's local absolute paths.
+- Check [asset-manifest.md](asset-manifest.md) before selecting any logo or IP file.
+- Select 2-4 relevant successful posters from `assets/examples/` before defining a new layout. Learn visual structure only; current facts and hard rules always override historical examples.
 - Use only user-confirmed IP assets for the active brand. If none is available, omit IP imagery.
+- Prefer transparent PNG variants for free-standing placement. A visible rectangular source background must never appear accidentally layered over the poster. Treat a nontransparent source as an intentional card or omit it.
 - For case posters, all screenshots, score captures, payment images, and chat images must remain original.
 - Allowed evidence treatment: proportional scaling, spacing, stacking, framing, surrounding card, border, shadow, and layout positioning.
 - Forbidden evidence treatment: redraw, regenerate, rewrite, beautify into fake UI, content edits, fake cropping, or synthetic replacement.
@@ -35,7 +39,11 @@ Use this file whenever poster visual direction, palette, logo, IP, or evidence h
 
 ### Logo
 
-Use the original 极致 Essay logo and preserve its cyan wordmark, gray graduation-cap symbol, and yellow English slogan.
+Use `assets/logos/essay-logo.png` and preserve its cyan wordmark, gray graduation-cap symbol, and yellow English slogan.
+
+### Visual references
+
+Use `assets/examples/essay/` for headline scale, bright editorial layouts, modular information blocks, and whitespace rhythm.
 
 ## DP / Distinction Pass
 
@@ -70,9 +78,13 @@ Use the original 极致 Essay logo and preserve its cyan wordmark, gray graduati
 
 ### Logo and IP
 
-- Use the original DP logo, with `#1167F2` and `#08D8C6` symbol colors and the neutral wordmark treatment.
-- DP posters may use only the user-confirmed DP mascot with the DP chest mark.
+- Use `assets/logos/dp-logo.png`, with `#1167F2` and `#08D8C6` symbol colors and the neutral wordmark treatment.
+- DP posters may use only the user-confirmed DP mascot files under `assets/ip/dp/`, all with the DP chest mark.
 - Never use an AI chest-mark mascot in a DP poster.
+
+### Visual references
+
+Use `assets/examples/dp/` for premium dark layouts, bright campaign layouts, comparison structures, process timelines, evidence cards, and IP integration.
 
 ## 极致 AI 留学生陪跑
 
@@ -103,9 +115,13 @@ Use the DP family with a brighter technology emphasis:
 
 ### Logo and IP
 
-- Use the original 极致 AI 留学生陪跑 logo.
-- 极致 AI 留学生陪跑 posters may use only the user-confirmed mascot with the AI chest mark.
+- Use `assets/logos/ai-companion-logo.png`.
+- 极致 AI 留学生陪跑 posters may use only the user-confirmed mascot files under `assets/ip/ai-companion/`, all with the AI chest mark.
 - Never use a DP chest-mark mascot in an AI陪跑 poster.
+
+### Visual references
+
+Use the layout grammar in `assets/examples/dp/` selectively. Replace DP-specific trust promises with planning, push, check, review, and human-AI collaboration; always use the AI-companion logo and AI chest-mark IP.
 
 ## Source priority
 
