@@ -1,0 +1,7 @@
+interface:
+  display_name: "极致教育AI海报生成"
+  short_description: "生成三品牌教育海报方案与图片 Prompt 的规范化流程"
+  default_prompt: "使用 $jizhi-education-ai-poster 为极致教育品牌生成一版符合品牌规范的海报方案与图片 Prompt。"
+
+policy:
+  allow_implicit_invocation: true

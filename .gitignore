@@ -1,0 +1,12 @@
+# Generated posters and case-specific renderers
+*.png
+*.jpg
+*.jpeg
+render_*.py
+
+# Local and editor files
+.DS_Store
+__pycache__/
+*.pyc
+.idea/
+.vscode/
