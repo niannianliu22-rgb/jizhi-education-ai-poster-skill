@@ -3,6 +3,8 @@
 *.jpg
 *.jpeg
 render_*.py
+*.zip
+*.zip
 
 # Bundled brand assets and approved visual references are part of the skill.
 !assets/

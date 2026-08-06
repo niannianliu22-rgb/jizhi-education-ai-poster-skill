@@ -30,6 +30,8 @@ git clone <repository-url> ~/.codex/skills/jizhi-education-ai-poster
 使用 $jizhi-education-ai-poster，为 DP 做一张产品介绍海报。
 ```
 
+完整操作方法、提示词模板和常见问题见 [使用说明.md](使用说明.md)。
+
 ## 核心约束
 
 - 所有品牌、所有海报默认不添加 CTA。
